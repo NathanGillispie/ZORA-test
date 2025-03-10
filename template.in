@@ -1,0 +1,29 @@
+# Hash comments
+# molecule before options
+
+start molecule
+  O      0.00000000     0.00000000     0.11726921
+  H      0.75698224     0.00000000    -0.46907685
+  H     -0.75698224     0.00000000    -0.46907685
+end molecule
+
+# Options below overwrite defaults in options.py
+
+charge +1
+spin 1
+# Supports: basis library (file in /basis) 
+basis 6-31g 
+diis true
+zora false
+so_scf
+grid_level 5
+e_convergence 1e-6
+d_convergence 1e-6
+maxiter 200
+nroots 50
+xc pbe0 
+nocom
+
+method THEORY
+
+

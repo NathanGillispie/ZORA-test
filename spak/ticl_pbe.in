@@ -1,0 +1,27 @@
+start molecule
+  Ti    0.00000    -0.0000    -0.0000
+  Cl    1.15637     0.3399     1.7862
+  Cl   -1.63198     1.4049    -0.0774
+  Cl    1.25702     0.2632    -1.7303
+  Cl   -0.78141    -2.0081     0.0215
+end molecule
+
+basis library sapporo-dzp-2012-diffuse
+charge 0
+mult 1
+relativistic zora
+grid_level 5
+e_convergence 1e-6
+d_convergence 1e-6
+
+#guess_mos ticl4.mos
+occupied 7 9
+do_tda
+analyze_orbitals
+cartesian false
+#noscf
+direct_diagonalization
+
+xc pbe
+nroots 100
+method td-gks

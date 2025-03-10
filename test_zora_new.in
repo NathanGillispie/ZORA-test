@@ -1,0 +1,18 @@
+start molecule
+  O      0.00000000     0.00000000     0.11726921
+  H      0.75698224     0.00000000    -0.46907685
+  H     -0.75698224     0.00000000    -0.46907685
+end molecule
+
+charge 0
+spin 0
+basis 6-31g
+#basis library sapporo-dkh3-dzp-2012-diffuse
+diis true
+so_scf
+relativistic zora
+grid_level 3
+e_convergence 1e-6
+d_convergence 1e-6
+xc hf
+method gks
